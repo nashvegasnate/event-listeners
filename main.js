@@ -12,25 +12,28 @@ const user = {
 // DOT NOTATION
 // get values out of an object
 
-// console.log(user.lovesJavscript);
+// console.log(user.lovesJavascript);
 //  console.log(user.username);
 
 // BRACKET NOTATION
-//const password = 'password';
-//console.log(user[password]);
-console.log(user['username']);
+// const password = 'password';
+// console.log(user[password]);  
+//output: abd123
+// console.log(user['username']);
+//output: biz.markie
 
-console.log(user[favoriteNumber]);
+//console.log(user[favoriteNumber]);
 
 // ASSIGNING VALUES
 
-//const newUser = {
-  //isNew: true,
-//}
+// const newUser = {
+  // isNew: true,
+// }
 
-//newUser.username = 'fresh.prince'; //dot notation
-//newUser['password'] = 'abcd1234'; //bracket notation
-//console.log(newUser);
+// newUser.username = 'fresh.prince'; //dot notation
+// newUser['password'] = 'abcd1234'; //bracket notation
+// console.log(newUser); 
+//output: {isNew: true, username: 'fresh.prince', password: "abcd1234"}
 
 /*const newObject = {
   username: 'Nathan',
@@ -54,17 +57,18 @@ newObject.sayHello(); //output: Aja
   
 //ITERATE OVER AN PBJECT 
 
-const usertTwo = {
+/*const usertTwo = {
   username: 'triinity.christiana',
   password: 'xyz234',
   lovesJavascript: true,
   favoriteNumber: 12,
 }
-
-//
+*/
+/*
 for (let key in userTwo) {
   console.log(key); // keys
   console.log(userTwo[key]); //values
   console.log(userTwo.key); //undefined
   console.log(userTwo); //values
 } 
+*/
