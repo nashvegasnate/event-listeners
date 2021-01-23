@@ -18,9 +18,9 @@ const user = {
 // BRACKET NOTATION
 //const password = 'password';
 //console.log(user[password]);
-console.log(user['username']);
+//console.log(user['username']);
 
-console.log(user[favoriteNumber]);
+//console.log(user[favoriteNumber]);
 
 // ASSIGNING VALUES
 
