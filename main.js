@@ -72,3 +72,14 @@ for (let key in userTwo) {
   console.log(userTwo); //values
 } 
 */
+// THIS DOES NOT WORK _ FIX IT******
+// function speak(user) {
+//   return `Hello ${user}!`;
+// }
+// function quiet(user) {
+//   return `Shut up $[user]!`;
+// }
+// function createGreeting(user, cd) {
+//   return cb(user);
+// }
+// console.log(createGreeting('Dan', speak));
