@@ -64,13 +64,3 @@ const pies = [
     iceCream: 'none',
   },
 ];
-white_check_mark
-eyes
-raised_hands
-
-
-
-
-
-
-
