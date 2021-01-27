@@ -126,16 +126,45 @@ if(buttonId === 'All') {
   pieBuilder(selectedPies);
 }
 }
-
+// C in CRUD: Create new pies
+const getFormInfo = (e) => {
+  // STOPS PAGE FFROM REFRESHING
+  e.preventDefault();
+}
 
 const buttonevents = () => {
-  const allBtn = document.querySelector('#All').addEventListener('click', handleButtonClick);
-  const docBtn = document.querySelector('#Doc').addEventListener('click', handleButtonClick);
-  const ajaBtn = document.querySelector('#Aja').addEventListener('click', handleButtonClick);
-  const trinityBtn = document.querySelector('#Trinity').addEventListener('click', handleButtonClick);
+  document.querySelector('#All').addEventListener('click', handleButtonClick);
+  document.querySelector('#Doc').addEventListener('click', handleButtonClick);
+  document.querySelector('#Aja').addEventListener('click', handleButtonClick);
+  document.querySelector('#Trinity').addEventListener('click', handleButtonClick);
+  document.querySelector('form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.querySelector('#name').value;
+    const ingredients = document.querySelector('#ingredients').value;
+    const bakeTemp = document.querySelector('#bakeTemp').value;
+    const drinkPairing = document.querySelector('#drinkPairing').value;
+    const imageUrl = document.querySelector('#imageUrl').value;
+    const instructor = document.querySelector('#instructor').value;
+    const iceCream = document.querySelector('#iceCream').value;
+    
+// SHORT HAND OBJECT NOTATION to addd values to obj
+    const obj = {
+      name,
+      bakeTemp,
+      ingredients,
+      drinkPairing,
+      imageUrl,
+      instructor,
+      iceCream,
+    }
+// pushing new object to pies array
+   pies.push(obj);
 
+  //  rebuilding the DOM
+   pieBuilder(pies);
 
-
+   document.querySelector('form').reset();
+  })
 }
 
 const init = () => {
