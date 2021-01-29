@@ -128,17 +128,8 @@ if(buttonId === 'All') {
 }
 // C in CRUD: Create new pies
 const getFormInfo = (e) => {
-  // STOPS PAGE FFROM REFRESHING
+  // STOPS PAGE FROM REFRESHING
   e.preventDefault();
-}
-
-const buttonevents = () => {
-  document.querySelector('#All').addEventListener('click', handleButtonClick);
-  document.querySelector('#Doc').addEventListener('click', handleButtonClick);
-  document.querySelector('#Aja').addEventListener('click', handleButtonClick);
-  document.querySelector('#Trinity').addEventListener('click', handleButtonClick);
-  document.querySelector('form').addEventListener('submit', (e) => {
-    e.preventDefault();
     const name = document.querySelector('#name').value;
     const ingredients = document.querySelector('#ingredients').value;
     const bakeTemp = document.querySelector('#bakeTemp').value;
@@ -157,15 +148,26 @@ const buttonevents = () => {
       instructor,
       iceCream,
     }
-// pushing new object to pies array
-   pies.push(obj);
 
-  //  rebuilding the DOM
-   pieBuilder(pies);
+    // PUSHING THE NEW OBJECT UP TO THE PIES ARRAY
+    pies.push(obj);
 
-   document.querySelector('form').reset();
-  })
+    // REBUILDING THE DOM
+    pieBuilder(pies);
+
+    document.querySelector('form').reset();
 }
+
+const buttonevents = () => {
+  document.querySelector('#All').addEventListener('click', handleButtonClick);
+  document.querySelector('#Doc').addEventListener('click', handleButtonClick);
+  document.querySelector('#Aja').addEventListener('click', handleButtonClick);
+  document.querySelector('#Trinity').addEventListener('click', handleButtonClick);
+  document.querySelector('form').addEventListener('submit', getFormInfo);
+}
+
+
+
 
 const init = () => {
   buttonevents();
