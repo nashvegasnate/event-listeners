@@ -157,17 +157,31 @@ const getFormInfo = (e) => {
 
     document.querySelector('form').reset();
 }
+// D in CRUD: delete the pie
+const deletePie = (e) => {
+  const targetType = e.target.type;
+    const targetId = e.target.id;
 
+    console.log(pies);
+
+    if (targetType === 'button') {
+      // DO SOMETHING
+      pies.splice(targetId, 1);
+    } 
+    pieBuilder(pies);
+}
 const buttonevents = () => {
   document.querySelector('#All').addEventListener('click', handleButtonClick);
   document.querySelector('#Doc').addEventListener('click', handleButtonClick);
   document.querySelector('#Aja').addEventListener('click', handleButtonClick);
   document.querySelector('#Trinity').addEventListener('click', handleButtonClick);
+
+  // targeting the delete button
+  document.querySelector('#pies').addEventListener('click', deletePie);
+
+  
   document.querySelector('form').addEventListener('submit', getFormInfo);
 }
-
-
-
 
 const init = () => {
   buttonevents();
